@@ -10,14 +10,20 @@ public abstract class Satellite {
         System.out.println("Создан спутник: " + this.name + " (заряд: " + this.energy.getBatteryLevel() * 100 + "%)");
     }
 
+    public SatelliteState getState() {
+        return this.state;
+    }
+
+    public EnergySystem getEnergy() {
+        return this.energy;
+    }
+
     public boolean activate() {
-        double batteryLevel = this.energy.getBatteryLevel();
-        if (batteryLevel > 0.2) {
-            this.state.activate();
+        if (this.state.activate(this.energy.hasSufficientPower())) {
             System.out.println(this.name + ": Активация успешна");
             return true;
         } else {
-            System.out.println(this.name + ": Ошибка активации (заряд: " + batteryLevel * 100 + "%)");
+            System.out.println(this.name + ": Ошибка активации (заряд: " + this.energy.getBatteryLevel() * 100 + "%)");
             return false;
         }
     }
@@ -33,10 +39,9 @@ public abstract class Satellite {
 
     public void consumeBattery(double amount) {
         this.energy.consume(amount);
-        double batteryLevel = this.energy.getBatteryLevel();
-        if (batteryLevel < 0.2) {
+        if (!this.energy.hasSufficientPower()) {
             System.out.println(this.name + ": Начата деактивация, критически мало заряда (заряд: "
-                    + batteryLevel * 100 + "%)");
+                    + this.energy.getBatteryLevel() * 100 + "%)");
             this.deactivate();
         }
     }

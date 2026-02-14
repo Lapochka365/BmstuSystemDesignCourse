@@ -28,7 +28,6 @@ public class CommunicationSatellite extends Satellite {
     @Override
     public String toString() {
         return "CommunicationSatellite{bandwidth=" + this.bandwidth + ", name='"
-                + this.name + "', isActive=" + this.state.isActive() + ", batteryLevel=" + this.energy.getBatteryLevel()
-                + "}";
+                + this.name + "', state=" + this.state + ", energy=" + this.energy + "}";
     }
 }

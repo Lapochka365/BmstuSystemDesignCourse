@@ -28,14 +28,15 @@ public class ImagingSatellite extends Satellite {
     }
 
     private void takePhoto() {
-        ++this.photosTaken;
-        System.out.println(this.name + ": Снимок #" + this.photosTaken + " сделан!");
+        if (this.state.isActive()) {
+            ++this.photosTaken;
+            System.out.println(this.name + ": Снимок #" + this.photosTaken + " сделан!");
+        }
     }
 
     @Override
     public String toString() {
         return "ImagingSatellite{resolution=" + this.resolution + ", photosTaken=" + this.photosTaken + ", name='"
-                + this.name + "', isActive=" + this.state.isActive() + ", batteryLevel=" + this.energy.getBatteryLevel()
-                + "}";
+                + this.name + "', state=" + this.state + ", energy=" + this.energy + "}";
     }
 }
