@@ -1,0 +1,33 @@
+#ACCOUNTS
+id,name,balance,active
+11111111-1111-1111-1111-111111111111,Основной счёт,0,true
+22222222-2222-2222-2222-222222222222,Накопительный,0,true
+33333333-3333-3333-3333-333333333333,Зарплатный,0,true
+44444444-4444-4444-4444-444444444444,Семейный,0,true
+#CATEGORIES
+id,type,name,active
+aaaa1111-aaaa-aaaa-aaaa-aaaaaaaaaaaa,INCOME,Зарплата,true
+aaaa2222-aaaa-aaaa-aaaa-aaaaaaaaaaaa,INCOME,Кэшбэк,true
+aaaa3333-aaaa-aaaa-aaaa-aaaaaaaaaaaa,INCOME,Подработка,true
+bbbb1111-bbbb-bbbb-bbbb-bbbbbbbbbbbb,EXPENSE,Кафе,true
+bbbb2222-bbbb-bbbb-bbbb-bbbbbbbbbbbb,EXPENSE,Транспорт,true
+bbbb3333-bbbb-bbbb-bbbb-bbbbbbbbbbbb,EXPENSE,Здоровье,true
+bbbb4444-bbbb-bbbb-bbbb-bbbbbbbbbbbb,EXPENSE,Продукты,true
+#OPERATIONS
+id,type,bankAccountId,amount,date,description,categoryId,active
+cc000001-cccc-cccc-cccc-cccccccccccc,INCOME,11111111-1111-1111-1111-111111111111,85000,2025-01-10,Зарплата за январь,aaaa1111-aaaa-aaaa-aaaa-aaaaaaaaaaaa,true
+cc000002-cccc-cccc-cccc-cccccccccccc,INCOME,11111111-1111-1111-1111-111111111111,1200,2025-01-15,Кэшбэк за покупки,aaaa2222-aaaa-aaaa-aaaa-aaaaaaaaaaaa,true
+cc000003-cccc-cccc-cccc-cccccccccccc,EXPENSE,11111111-1111-1111-1111-111111111111,2500,2025-01-12,Обед с коллегами,bbbb1111-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
+cc000004-cccc-cccc-cccc-cccccccccccc,EXPENSE,11111111-1111-1111-1111-111111111111,1800,2025-01-18,Ужин в ресторане,bbbb1111-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
+cc000005-cccc-cccc-cccc-cccccccccccc,EXPENSE,11111111-1111-1111-1111-111111111111,3500,2025-01-14,Проездной на месяц,bbbb2222-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
+cc000006-cccc-cccc-cccc-cccccccccccc,EXPENSE,11111111-1111-1111-1111-111111111111,4200,2025-01-22,Визит к стоматологу,bbbb3333-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
+cc000007-cccc-cccc-cccc-cccccccccccc,INCOME,22222222-2222-2222-2222-222222222222,20000,2025-01-10,Перевод на накопления,aaaa1111-aaaa-aaaa-aaaa-aaaaaaaaaaaa,true
+cc000008-cccc-cccc-cccc-cccccccccccc,EXPENSE,22222222-2222-2222-2222-222222222222,500,2025-01-25,Кофе,bbbb1111-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
+cc000009-cccc-cccc-cccc-cccccccccccc,INCOME,33333333-3333-3333-3333-333333333333,95000,2025-01-05,Зарплата основная,aaaa1111-aaaa-aaaa-aaaa-aaaaaaaaaaaa,true
+cc000010-cccc-cccc-cccc-cccccccccccc,INCOME,33333333-3333-3333-3333-333333333333,15000,2025-01-20,Фриланс-проект,aaaa3333-aaaa-aaaa-aaaa-aaaaaaaaaaaa,true
+cc000011-cccc-cccc-cccc-cccccccccccc,EXPENSE,33333333-3333-3333-3333-333333333333,6700,2025-01-08,Продукты на неделю,bbbb4444-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
+cc000012-cccc-cccc-cccc-cccccccccccc,EXPENSE,33333333-3333-3333-3333-333333333333,1500,2025-01-16,Такси,bbbb2222-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
+cc000013-cccc-cccc-cccc-cccccccccccc,INCOME,44444444-4444-4444-4444-444444444444,50000,2025-01-10,Общий взнос,aaaa1111-aaaa-aaaa-aaaa-aaaaaaaaaaaa,true
+cc000014-cccc-cccc-cccc-cccccccccccc,EXPENSE,44444444-4444-4444-4444-444444444444,8900,2025-01-13,Закупка продуктов,bbbb4444-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
+cc000015-cccc-cccc-cccc-cccccccccccc,EXPENSE,44444444-4444-4444-4444-444444444444,2300,2025-01-19,Семейный обед,bbbb1111-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
+cc000016-cccc-cccc-cccc-cccccccccccc,EXPENSE,44444444-4444-4444-4444-444444444444,3200,2025-01-27,Лекарства,bbbb3333-bbbb-bbbb-bbbb-bbbbbbbbbbbb,true
