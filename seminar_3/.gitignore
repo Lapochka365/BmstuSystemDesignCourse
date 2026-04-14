@@ -1,0 +1,10 @@
+*.class
+
+# Gradle
+build/
+.gradle/
+
+# IDE
+.project
+.classpath
+.settings/
